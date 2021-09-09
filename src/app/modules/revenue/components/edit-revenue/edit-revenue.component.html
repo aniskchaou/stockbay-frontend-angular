@@ -1,0 +1,160 @@
+<form class="form-horizontal">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group"><label for="income_paymentDate" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Date de paiement
+                        </font>
+                    </font><i aria-hidden="true" data-toggle="tooltip" data-placement="top" title=""
+                        class="fa fa-asterisk text-danger require" data-original-title="Required"></i>
+                </label>
+                <div class="col-sm-8">
+                    <div class="input-group date">
+                        <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                        <input [(ngModel)]="model.income_paymentDate" type="date" value="{{model.income_paymentDate}}"
+                            name="income_paymentDate" id="income_paymentDate" placeholder="AAAA-MM-JJ"
+                            class="form-control">
+                    </div>
+                    <!---->
+                </div>
+            </div>
+            <div class="form-group"><label for="customer_id" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Nom du client
+                        </font>
+                    </font><i aria-hidden="true" data-toggle="tooltip" data-placement="top" title=""
+                        class="fa fa-asterisk text-danger require" data-original-title="Required"></i>
+                </label>
+                <div class="col-sm-8">
+                    <select [(ngModel)]="model.customer_id" id="customer_id" name="customer_id" class="form-control">
+                        <option value="">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Sélectionnez un client</font>
+                            </font>
+                        </option>
+                        <option value="10">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Ashley Hermann</font>
+                            </font>
+                        </option>
+
+                    </select>
+                    <!---->
+                </div>
+            </div>
+            <div class="form-group"><label for="income_paymentType" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Type de paiement
+                        </font>
+                    </font>
+                </label>
+                <div class="col-sm-8">
+                    <select [(ngModel)]="model.income_paymentType" type="text" name="income_paymentType"
+                        id="income_paymentType" class="form-control">
+                        <option value="">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Sélectionner le genre</font>
+                            </font>
+                        </option>
+                        <option>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">En espèces</font>
+                            </font>
+                        </option>
+                        <option>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Vérifier</font>
+                            </font>
+                        </option>
+                        <option>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Commande de paiement</font>
+                            </font>
+                        </option>
+                    </select>
+                    <!---->
+                </div>
+            </div>
+            <div class="form-group"><label for="income_paymentAccount" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Compte de paiement
+                        </font>
+                    </font>
+                </label>
+                <div class="col-sm-8">
+                    <select [(ngModel)]="model.income_paymentAccount" type="text" name="income_paymentAccount"
+                        id="income_paymentAccount" class="form-control">
+                        <option value="">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Sélectionnez un compte</font>
+                            </font>
+                        </option>
+                        <option>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Utilitaire</font>
+                            </font>
+                        </option>
+                        <option>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Un service</font>
+                            </font>
+                        </option>
+                        <option>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Actuel</font>
+                            </font>
+                        </option>
+                    </select>
+                    <!---->
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group"><label for="income_amount" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Montant
+                        </font>
+                    </font><i aria-hidden="true" data-toggle="tooltip" data-placement="top" title=""
+                        class="fa fa-asterisk text-danger require" data-original-title="Required"></i>
+                </label>
+                <div class="col-sm-8">
+                    <input [(ngModel)]="model.income_amount" value="{{model.income_amount}}" type="number" min="0"
+                        max="10000000" step="any" name="income_amount" id="income_amount" placeholder="Montant"
+                        class="form-control">
+                    <!---->
+                </div>
+            </div>
+            <div class="form-group"><label for="income_details" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Détails du revenu
+                        </font>
+                    </font>
+                </label>
+                <div class="col-sm-8">
+                    <textarea [(ngModel)]="model.income_details" value="{{model.income_details}}" id="income_details"
+                        name="income_details" rows="5" placeholder="Entrer ..." class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <div class="col-sm-8 col-sm-offset-4">
+                    <button (click)="edit()" type="button" class="btn btn-info">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">sauvegarder</font>
+                        </font>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6"></div>
+    </div>
+</form>

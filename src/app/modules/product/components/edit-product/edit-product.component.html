@@ -1,0 +1,237 @@
+<form method="POST" enctype="multipart/form-data" class="form-horizontal">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group"><label for="product_name" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Nom du produit
+                        </font>
+                    </font><i aria-hidden="true" data-toggle="tooltip" data-placement="top" title=""
+                        class="fa fa-asterisk text-danger require" data-original-title="Required"></i>
+                </label>
+                <div class="col-sm-8">
+                    <input [(ngModel)]="model.product_name" type="text" name="product_name" id="product_name"
+                        placeholder="Nom du produit" class="form-control" value="{{model.product_name}}">
+                    <!---->
+                </div>
+            </div>
+            <div class="form-group"><label for="category_id" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Nom de catégorie
+                        </font>
+                    </font><i aria-hidden="true" data-toggle="tooltip" data-placement="top" title=""
+                        class="fa fa-asterisk text-danger require" data-original-title="Required"></i>
+                </label>
+                <div class="col-sm-8">
+                    <select [(ngModel)]="model.category_id" type="text" id="category_id" name="category_id"
+                        class="form-control category_id">
+                        <option value="0" selected="selected">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Choisir une catégorie</font>
+                            </font>
+                        </option>
+                        <option value="71">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Eletronique</font>
+                            </font>
+                        </option>
+
+
+                    </select>
+                    <!---->
+                </div>
+            </div>
+            <!---->
+            <div class="form-group"><label for="supplier_id" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Nom du fournisseur
+                        </font>
+                    </font><i aria-hidden="true" data-toggle="tooltip" data-placement="top" title=""
+                        class="fa fa-asterisk text-danger require" data-original-title="Required"></i>
+                </label>
+                <div class="col-sm-8">
+                    <select [(ngModel)]="model.supplier_id" name="supplier_id" id="supplier_id" class="form-control">
+                        <option value="">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Sélectionnez un fournisseur</font>
+                            </font>
+                        </option>
+                        <option value="51">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Chandra</font>
+                            </font>
+                        </option>
+
+                    </select>
+                    <!---->
+                </div>
+            </div>
+            <div class="form-group"><label for="product_unit" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Unité de produit
+                        </font>
+                    </font><i aria-hidden="true" data-toggle="tooltip" data-placement="top" title=""
+                        class="fa fa-asterisk text-danger require" data-original-title="Required"></i>
+                </label>
+                <div class="col-sm-8">
+                    <input [(ngModel)]="model.product_unit" value="{{model.product_unit}}" type="number"
+                        name="product_unit" id="product_unit" placeholder="Unité de produit" class="form-control">
+                    <!---->
+                </div>
+            </div>
+            <div class="form-group"><label for="product_alertquantity" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Quantité d'alerte
+                        </font>
+                    </font><i aria-hidden="true" data-toggle="tooltip" data-placement="top" title=""
+                        class="fa fa-asterisk text-danger require" data-original-title="Required"></i>
+                </label>
+                <div class="col-sm-8">
+                    <input [(ngModel)]="model.product_alertquantity" value="{{model.product_alertquantity}}"
+                        type="number" name="product_alertquantity" id="product_alertquantity"
+                        placeholder="Alerte produit" class="form-control">
+                    <!---->
+                </div>
+            </div>
+            <div class="form-group"><label for="product_supplierPrice" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Coût du produit
+                        </font>
+                    </font><i aria-hidden="true" data-toggle="tooltip" data-placement="top" title=""
+                        class="fa fa-asterisk text-danger require" data-original-title="Required"></i>
+                </label>
+                <div class="col-sm-8">
+                    <input [(ngModel)]="model.product_supplierPrice" value="{{model.product_supplierPrice}}"
+                        type="number" min="0" max="10000000" step="any" name="product_supplierPrice"
+                        id="product_supplierPrice" placeholder="Prix ​​de revient" class="form-control">
+                    <!---->
+                </div>
+            </div>
+            <div class="form-group"><label for="product_image" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Image du produit
+                        </font>
+                    </font>
+                </label>
+                <div class="col-sm-8">
+                    <div><input type="file" accept="image/*" name="product_image"></div>
+                    <!---->
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group"><label for="product_sellPrice" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Prix ​​du produit
+                        </font>
+                    </font><i aria-hidden="true" data-toggle="tooltip" data-placement="top" title=""
+                        class="fa fa-asterisk text-danger require" data-original-title="Required"></i>
+                </label>
+                <div class="col-sm-8">
+                    <input [(ngModel)]="model.product_sellPrice" value="{{model.product_sellPrice}}" type="number"
+                        min="0" max="10000000" step="any" name="product_sellPrice" id="product_sellPrice"
+                        placeholder="Prix ​​de vente" class="form-control">
+                    <!---->
+                </div>
+            </div>
+            <div class="form-group"><label for="product_code" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Code
+                        </font>
+                    </font>
+                </label>
+                <div class="col-sm-8">
+                    <input [(ngModel)]="model.product_code" value="{{model.product_code}}" type="text"
+                        name="product_code" id="product_code" placeholder="Code produit" class="form-control">
+                </div>
+                <!---->
+            </div>
+            <div class="form-group"><label for="product_tax" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Taux d'imposition
+                        </font>
+                    </font>
+                </label>
+                <div class="col-sm-8">
+                    <input [(ngModel)]="model.product_tax" value="{{model.product_tax}}" type="number" min="0" max="100"
+                        step="any" name="product_tax" id="product_tax" placeholder="Taux d'imposition"
+                        class="form-control">
+                    <!---->
+                </div>
+            </div>
+            <div class="form-group"><label for="warehouse_id" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Entrepôt
+                        </font>
+                    </font>
+                </label>
+                <div class="col-sm-8">
+                    <select [(ngModel)]="model.warehouse_id" type="text" name="warehouse_id" id="warehouse_id"
+                        class="form-control">
+                        <option value="">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Sélectionnez la maison</font>
+                            </font>
+                        </option>
+                        <option value="3">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">entrpot 1</font>
+                            </font>
+                        </option>
+
+                    </select>
+                    <!---->
+                </div>
+            </div>
+            <div class="form-group"><label for="product_details" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            détails du produit
+                        </font>
+                    </font>
+                </label>
+                <div class="col-sm-8">
+                    <textarea value="{{model.product_details}}" [(ngModel)]="model.product_details" id="product_details"
+                        name="product_details" rows="3" placeholder="Entrer ..." class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group"><label for="product_detailsforinvoice" class="col-sm-4 control-label">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Détails de la facture
+                        </font>
+                    </font>
+                </label>
+                <div class="col-sm-8">
+                    <textarea [(ngModel)]="model.product_detailsforinvoice" value="{{model.product_detailsforinvoice}}"
+                        id="product_detailsforinvoice" name="product_detailsforinvoice" rows="3"
+                        placeholder="Entrer ..." class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <div class="col-sm-8 col-sm-offset-4">
+                    <button (click)="edit()" type="button" class="btn btn-info">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Enregistrer</font>
+                        </font>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6"></div>
+    </div>
+</form>
