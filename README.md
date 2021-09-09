@@ -16,7 +16,6 @@ Stock Bay is an inventory management system that enables you to manage inventory
 -   Last updated: December 2020
 
 ## Table of contents
-* [Documentation](#general-info)
 * [Demo](#demo)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
@@ -26,8 +25,7 @@ Stock Bay is an inventory management system that enables you to manage inventory
 * [Contact](#contact)
 * [License](#license)
 
-## Documentation
-https://github.com/aniskchaou/STOCKBAY-FRONTEND-ADMIN/wiki
+
 
 ## Demo
 https://stock-bay.herokuapp.com/
